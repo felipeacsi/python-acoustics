@@ -40,6 +40,10 @@ nosetests.xml
 .project
 .pydevproject
 
+# Tox
+.tox
+tox.ini
+
 _build
 *.bak
 
