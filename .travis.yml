@@ -13,7 +13,7 @@ before_install:
 install:
   - conda create -n testenv --yes pip python=$TRAVIS_PYTHON_VERSION
   - source activate testenv
-  - conda install --yes numpy scipy matplotlib six pytest
+  - conda install --yes numpy=1.8 scipy matplotlib six pytest
   - pip install .
 
 script:
