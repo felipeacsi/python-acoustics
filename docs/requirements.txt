@@ -1,4 +1,5 @@
 hg+https://bitbucket.org/Surgo/blockdiag
+sphinx-ext-autodoc
 sphinxcontrib-blockdiag==1.1.1
 sphinxcontrib-bibtex==0.2.6
 six>=1.4.1
