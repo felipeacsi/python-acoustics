@@ -276,6 +276,8 @@ class Mock(object):
         else:
             return Mock()
 
-#MOCK_MODULES = ['numpy']
-#for mod_name in MOCK_MODULES:
-    #sys.modules[mod_name] = Mock()
+import mock
+
+MOCK_MODULES = ['numpy', 'scipy', 'matplotlib']
+for mod_name in MOCK_MODULES:
+    sys.modules[mod_name] = Mock()
