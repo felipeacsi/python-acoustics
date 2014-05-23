@@ -1,3 +1,4 @@
+sphinx-ext-autodoc
 six
 numpy
 scipy
