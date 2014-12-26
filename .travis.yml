@@ -13,9 +13,7 @@ env:
 matrix:
   include:
   - python: 2.7
-  - python: 2.7
     env: INSTALL_OPTIONAL=true
-  - python: 3.4
   - python: 3.4
     env: INSTALL_OPTIONAL=true
 
@@ -35,7 +33,7 @@ install:
   - source activate testenv
 
   # Optional dependencies
-  - if [[$INSTALL_OPTIONAL; then conda install pandas=0.14.1
+  - if $INSTALL_OPTIONAL; then conda install pandas=0.14.1
 
   - pip install
   - python setup.py install
