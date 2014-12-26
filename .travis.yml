@@ -33,7 +33,7 @@ install:
   - source activate testenv
 
   # Optional dependencies
-  - if $INSTALL_OPTIONAL; then conda install pandas=0.14.1
+  - if $INSTALL_OPTIONAL; then conda install pandas=0.14.1; fi
 
   - pip install
   - python setup.py install
