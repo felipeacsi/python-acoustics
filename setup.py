@@ -1,6 +1,6 @@
 import os
 from setuptools import setup, find_packages
-from Cython.Build import cythonize
+from setuptools import Extension
 import numpy as np
 
 if os.path.exists('README.md'):
@@ -25,7 +25,6 @@ setup(
           'scipy >= 0.14',
           'matplotlib',
           'six >= 1.4.1',
-          'cython',
           'numexpr',
           ],
       extras_require={
@@ -33,6 +32,6 @@ setup(
           'fast_fft': 'pyFFTW',
           'io': 'pandas',
           },
-      ext_modules=cythonize('acoustics/*.pyx'),
+      ext_modules=[Extension("acoustics._signal", ["acoustics/_signal.c"])],
       include_dirs=[np.get_include()]
       )
